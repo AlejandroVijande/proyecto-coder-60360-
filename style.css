@@ -1,0 +1,153 @@
+/* COLORES DEL LOGO #7bc6e6 celeste  #3bbab3 verde   #db92c9 rosa*/
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* FONT */
+@font-face {
+    font-family: "gobold";
+    src: url(./font/Gobold\ Regular.ttf);
+}
+
+/* MOBILE FIRST */
+
+/* HEADER */
+header {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background-color: white;
+}
+
+/* ENLACES DE CONTACTO */
+.enlaces-de-contacto {
+    /* grid-column: span 2;  hace falta? */
+    display: flex;
+    justify-content: end;
+    background-color: #db92c9;
+    align-items: end;
+}
+
+.bi {
+    fill: #3bbab3;
+    margin-right: 1rem;
+}
+
+
+.enlaces-txt {
+    display: none;
+}
+
+.navbar-flex {
+    display: none;
+}
+
+/* NAVBAR */
+.enlaces-nav {
+    list-style-type: none;
+    font-family: "gobold";
+    font-size: 1rem;
+    font-style: normal;
+    text-decoration: none;
+    color: #3bbab3;
+}
+
+/* PRESENTACION */
+section h1 {
+    font-family: "Nunito", sans-serif;
+    font-style: italic;
+    /* font-weight: bold; */
+    font-size: 1.5rem;
+    background-color: #db92c9;
+    text-align: center;
+}
+
+.carousel,
+.slide {
+    padding: 0.5rem;
+}
+
+h2 {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+.mapa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+textarea,
+select,
+label {
+    width: 200px;
+    padding: 0;
+    margin: 4px;
+    box-sizing: border-box;
+}
+
+.formulario {
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+
+/* PIE DE PAGINA */
+footer {
+    font-family: "gobold";
+    font-size: 1rem;
+    text-align: center;
+    background-color: #7bc6e6;
+    position: sticky;
+    bottom: 0;
+}
+
+footer .bi {
+    fill: #db92c9;
+
+}
+
+/* TABLET */
+@media only screen and (min-width:768px) {
+    .nav-bootstrap {
+        display: none;
+    }
+
+    .navbar-flex {
+        display: block;
+    }
+
+    .enlaces-txt {
+        display: block;
+
+
+    }
+}
+
+/* DESKTOP */
+@media only screen and (min-width:1200px) {}
