@@ -43,11 +43,14 @@ header {
     justify-content: end;
     background-color: #db92c9;
     align-items: end;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
 }
 
 .bi {
-    fill: #3bbab3;
+    fill: #2b847f;
     margin-right: 1rem;
+    text-shadow: 10px 10px 10px black;
 }
 
 
@@ -69,6 +72,9 @@ header {
     color: #3bbab3;
 }
 
+
+
+/* --------------------------------------------INDEX----------------------------------------- */
 /* PRESENTACION */
 section h1 {
     font-family: "Nunito", sans-serif;
@@ -113,6 +119,53 @@ label {
     font-size: 1rem;
     text-align: center;
     text-decoration: none;
+    padding-bottom: 1rem;
+}
+
+/* --------------------------------------------TERAPIAS----------------------------------------- */
+
+.terapias {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-bottom: 2rem;
+padding-top: 1rem;
+
+}
+
+.modal-title {
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    color: #3bbab3;
+    }
+
+h2 {
+    font-family: "Nunito", sans-serif;
+    font-size: 2rem;
+}
+.terapias-img {
+   width: 65vw;
+   padding-bottom: 1rem;
+}
+
+.terapias-txt-corto {
+    font-size: 1.2rem;
+    text-align: center;
+    font-style: italic;
+    margin: 0rem 1rem 0rem 1rem;
+    padding-bottom: 1rem;
+}
+.terapias-txt-largo {
+    text-align: justify;
+}
+.btn-outline {
+    /* background-color: #db92c9; */
+    color: #3bbab3;
+    border-width: 3px;
+    border-color: #3bbab3;
+    font-size: 1rem;
+    font-weight: bold;
+    
 
 }
 
@@ -125,29 +178,61 @@ footer {
     background-color: #7bc6e6;
     position: sticky;
     bottom: 0;
+    padding-top: 0.3rem;
 }
 
 footer .bi {
-    fill: #db92c9;
-
+    fill: #ad6d9d;
+    padding-bottom: 0.3rem;
 }
 
-/* TABLET */
-@media only screen and (min-width:768px) {
+/* -------------------TABLET------------------- */
+/* @media only screen and (min-width:768px) {
     .nav-bootstrap {
         display: none;
     }
-
-    .navbar-flex {
-        display: block;
-    }
-
     .enlaces-txt {
         display: block;
-
-
     }
-}
+
+    .navbar-flex {
+
+        display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    }
+
+
+    .logo {
+        width: 100px;
+        grid-column: span 1;
+    }
+
+    header ul {
+        grid-column: span 1;
+        display: flex;
+        margin-top: 1rem;
+        justify-content: space-between;
+        width: 80vw;
+    }
+    .enlaces-nav {
+        list-style-type: none;
+        font-family: "gobold";
+        font-size: 1.2rem;
+        font-style: normal;
+        text-decoration: none;
+        color: #3bbab3;
+    }
+    ul li a
+    {
+        list-style-type: none;
+        font-family: "gobold";
+        font-size: 1.2rem;
+        font-style: normal;
+        text-decoration: none;
+        color: #3bbab3;
+    }
+} */
 
 /* DESKTOP */
 @media only screen and (min-width:1200px) {}
