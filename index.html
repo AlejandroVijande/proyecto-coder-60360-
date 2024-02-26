@@ -166,15 +166,15 @@
                 <form class="formulario" action="" method="post">
                     <div>
                         <label for="nombre">Nombre y apellido</label>
-                        <input type="text" name="nombre" id="nombre" />
+                        <input class="form-input" type="text" name="nombre" id="nombre" />
                     </div>
                     <div>
                         <label for="correo">Correo electronico</label>
-                        <input type="email" name="correo" id="correo" />
+                        <input class="form-input" type="email" name="correo" id="correo" />
                     </div>
                     <div>
                         <label for="telefono">Telefono</label>
-                        <input type="tel" name="telefono" id="telefono" />
+                        <input class="form-input" class="form-input" type="tel" name="telefono" id="telefono" />
                     </div>
                     <div>
                         <label for="modalidad-de-tratamiento">Modalidad de tratamiento</label>
@@ -188,15 +188,15 @@
                     <div>
                         <label for="osocial-prepaga">O. Social / Prepaga</label>
                         <!-- Esto deberia habilitarse solamente si seleccionan la opcion "obra social" o "prepaga", busque el codigo para hacerlo, pero no termine de entenderlo -->
-                        <input type="osocial-prepaga" name="osocial-prepaga" id="osocial-prepaga" />
+                        <input class="form-input" type="osocial-prepaga" name="osocial-prepaga" id="osocial-prepaga" />
                     </div>
                     <div>
                         <label for="mensaje">Motivo de consulta</label>
-                        <br />
-                        <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                    
+                        <textarea class="form-input motivo-de-consulta" name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
                     </div>
-                    <input type="submit" value="Enviar" />
-                    <input type="reset" value="Borrar formulario" />
+                    <div class="button-tablet"><input class="form-button" type="submit" value="Enviar" />
+                    <input class="form-button" type="reset" value="Borrar formulario" /></div>
                 </form>
             </section>
     </main>
