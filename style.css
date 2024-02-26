@@ -69,6 +69,10 @@ header {
     color: #3bbab3;
 }
 
+ul li a :hover {
+    color: #db92c9;
+}
+
 
 
 /* ------------------INDEX------------------ */
@@ -151,7 +155,6 @@ select {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .wrapper-terapias {
@@ -173,7 +176,7 @@ h2 {
     font-size: 2rem;
 }
 
-.terapias-img {    
+.terapias-img {
     width: 65vw;
     padding-bottom: 1rem;
 
@@ -191,7 +194,7 @@ h2 {
     text-align: justify;
 }
 
-.btn-outline {  
+.btn-outline {
     color: #3bbab3;
     border-width: 3px;
     border-color: #3bbab3;
@@ -279,11 +282,10 @@ footer .bi {
         flex-direction: column;
         justify-content: center;
         align-items: stretch;
-        margin: 0rem 0.5rem 0rem 0.5rem;
+        margin: 0rem 1rem 1rem 1rem;
     }
 
-    .mapa,
-    h2 {
+    .mapa h2 {
         margin-left: 1rem;
         align-self: start;
     }
@@ -307,7 +309,7 @@ footer .bi {
         margin-bottom: 1rem;
     }
 
-    .motivo-de-consulta {
+    .motivo-de-consulta-textarea {
         width: 77vw;
     }
 
@@ -322,21 +324,22 @@ footer .bi {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2);
         align-items: center;
-        padding-bottom: 2rem;
+        padding-bottom: 2.5rem;
         padding-top: 1rem;
-       
+
     }
-    .terapias-reverse{
+
+    .terapias-reverse {
         direction: rtl;
     }
-    
-    .terapias-txt-corto{
+
+    .terapias-txt-corto {
         width: 35vw;
     }
-    
+
 
     .terapias-img {
-        
+
         width: 35vw;
         margin-left: 5rem;
         margin-right: 5rem;
@@ -345,53 +348,55 @@ footer .bi {
 }
 
 /* -----------------------------------------DESKTOP----------------------------------------- */
-/* @media only screen and (min-width:1200px) {
-    .nav-bootstrap {
-        display: none;
-    }
+@media only screen and (min-width:1200px) {
     .enlaces-txt {
-        display: block;
-        padding-right: 0.5rem;
-        color:#2b847f;
-        font-size: 1.2rem;
-        font-weight: bold;
-        
+        font-size: 1rem;
     }
 
     .navbar-flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    }
-
-
-    .logo {
-        width: 100px;
-        grid-column: span 1;
+        flex-direction: row;
     }
 
     header ul {
-        grid-column: span 1;
-        display: flex;
         margin-top: 1rem;
-        justify-content: space-between;
         width: 80vw;
     }
-    .enlaces-nav {
-        list-style-type: none;
-        font-family: "gobold";
-        font-size: 1.2rem;
-        font-style: normal;
-        text-decoration: none;
-        color: #3bbab3;
+
+    .motivo-de-consulta {
+        display: flex;
+
     }
-    ul li a
-    {
-        list-style-type: none;
-        font-family: "gobold";
-        font-size: 1.2rem;
-        font-style: normal;
-        text-decoration: none;
-        color: #3bbab3;
+
+    .motivo-de-consulta-textarea {
+        width: 50vw;
     }
-} */
+
+
+    .terapias-grilla {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2);
+
+    }
+
+    .terapias {
+        display: flex;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+
+    }
+
+
+
+    .terapias-txt-corto {
+        width: 35vw;
+        text-align: center;
+    }
+
+    .terapias-img {
+
+        width: 25vw;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+}
