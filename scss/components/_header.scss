@@ -50,6 +50,7 @@ header {
                 font-size: 1.2rem;
                 font-weight: bold;
             }
+
             @include mq-desktop {
                 font-size: 1rem;
             }
@@ -88,6 +89,7 @@ header {
             justify-content: space-evenly;
             grid-column: span 2;
         }
+
         @include mq-desktop {
             flex-direction: row;
         }
@@ -102,10 +104,11 @@ header {
     }
 
     ul {
-        @include mq-desktop{
+        @include mq-desktop {
             margin-top: 1rem;
             width: 80vw;
         }
+
         li {
             a {
                 @include mq-tablet {
@@ -118,9 +121,12 @@ header {
                     margin: 1rem 1rem 1rem 1rem;
                 }
             }
-            a :hover {
-                color: $rosa;            
+
+            a:hover {
+                color: $rosa;
             }
         }
     }
+
+
 }
