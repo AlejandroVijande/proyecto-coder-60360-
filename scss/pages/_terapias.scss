@@ -1,0 +1,59 @@
+// MOBILE FIRST
+.terapias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper-terapias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.modal-title {
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    color: #3bbab3;
+}
+
+h2 {
+    font-family: "Nunito", sans-serif;
+    font-size: 2rem;
+}
+
+.terapias-img {
+    width: 65vw;
+    padding-bottom: 1rem;
+
+}
+
+.terapias-txt-corto {
+    font-size: 1.2rem;
+    text-align: center;
+    font-style: italic;
+    margin: 0rem 1rem 0rem 1rem;
+    padding-bottom: 1rem;
+}
+
+.terapias-txt-largo {
+    text-align: justify;
+}
+
+.btn-outline {
+    color: #3bbab3;
+    border-width: 3px;
+    border-color: #3bbab3;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.btn-outline:hover {
+    color: #db92c9;
+    border-color: #db92c9;
+}
+.modal-title {
+    background-color: white;
+}

@@ -1,405 +1,363 @@
-/* COLORES DEL LOGO #7bc6e6 celeste  #3bbab3 verde   #db92c9 rosa*/
-/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul,
 ol {
-    list-style: none;
+  list-style: none;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 /* FONT */
 @font-face {
-    font-family: "gobold";
-    src: url(./font/Gobold\ Regular.ttf);
+  font-family: "gobold";
+  src: url(./font/Gobold\ Regular.ttf);
 }
-
-/* MOBILE FIRST */
-
-/* HEADER */
 header {
-    position: sticky;
-    z-index: 1;
-    top: 0;
-    background-color: white;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  background-color: white;
 }
-
-/* ENLACES DE CONTACTO */
-.enlaces-de-contacto {
-    grid-column: span 2;
-    display: flex;
-    justify-content: end;
-    background-color: #db92c9;
+@media only screen and (min-width: 768px) {
+  header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2);
     align-items: center;
-    padding: 0.2rem 0rem 0.2rem 0rem;
+  }
 }
-
-.bi {
-    fill: #2b847f;
-    margin: 0rem 0.3rem 0rem 0.8rem;
+header .enlaces-de-contacto {
+  grid-column: span 2;
+  display: flex;
+  justify-content: end;
+  background-color: #db92c9;
+  align-items: center;
+  padding: 0.2rem 0rem 0.2rem 0rem;
 }
-
-.enlaces-txt {
+header .enlaces-de-contacto .bi {
+  fill: #2b847f;
+  margin: 0rem 0.3rem 0rem 0.8rem;
+}
+header .enlaces-de-contacto .enlaces-txt {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  header .enlaces-de-contacto .enlaces-txt {
+    grid-column: span 2;
+    display: block;
+    padding-right: 0.5rem;
+    color: #2b847f;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  header .enlaces-de-contacto .enlaces-txt {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header .nav-bootstrap {
     display: none;
+  }
 }
-
-.navbar-flex {
-    display: none;
+header .nav-bootstrap .enlaces-nav {
+  list-style-type: none;
+  font-family: "gobold";
+  font-size: 1rem;
+  font-style: normal;
+  text-decoration: none;
+  color: #3bbab3;
 }
-
-/* NAVBAR */
-.enlaces-nav {
+@media only screen and (min-width: 768px) {
+  header .logo {
+    width: 100px;
+  }
+}
+header .navbar-flex {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  header .navbar-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-column: span 2;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  header .navbar-flex {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header .navbar-flex .enlaces {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  header ul {
+    margin-top: 1rem;
+    width: 80vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  header ul li a {
     list-style-type: none;
     font-family: "gobold";
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-style: normal;
     text-decoration: none;
     color: #3bbab3;
+    margin: 1rem 1rem 1rem 1rem;
+  }
+}
+header ul li a :hover {
+  color: #db92c9;
 }
 
-ul li a :hover {
-    color: #db92c9;
+footer {
+  font-family: "gobold";
+  font-size: 1rem;
+  text-align: center;
+  background-color: #7bc6e6;
+  position: sticky;
+  bottom: 0;
+  padding-top: 0.3rem;
 }
 
+footer .bi {
+  fill: #ad6d9d;
+  padding-bottom: 0.3rem;
+}
 
-
-/* ------------------INDEX------------------ */
-/* PRESENTACION */
 section h1 {
-    font-family: "Nunito", sans-serif;
-    font-style: italic;
-    /* font-weight: bold; */
-    font-size: 1.5rem;
-    background-color: #db92c9;
-    text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  background-color: #db92c9;
+  text-align: center;
 }
 
 .carousel,
 .slide {
-    padding: 0.5rem;
+  padding: 0.5rem;
 }
 
 h2 {
-    font-family: "Nunito", sans-serif;
-    font-size: 1.5rem;
-    text-align: center;
-    padding-top: 1.5rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 1.5rem;
 }
 
 .mapa {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 textarea,
 select,
 label {
-    width: 200px;
-    padding: 0;
-    margin: 4px;
-    box-sizing: border-box;
+  width: 200px;
+  padding: 0;
+  margin: 4px;
+  box-sizing: border-box;
 }
 
 select {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .formulario {
-    font-family: "Nunito", sans-serif;
-    font-style: normal;
-    font-size: 1rem;
-    text-align: center;
-    text-decoration: none;
-    margin-bottom: 1rem;
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 1rem;
 }
 
 .form-input {
-    width: 70vw;
-    margin-bottom: 1rem;
+  width: 70vw;
+  margin-bottom: 1rem;
 }
 
 .form-button {
-    color: #3bbab3;
-    border-width: 3px;
-    border-color: #3bbab3;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 0.4rem;
-    border-radius: 6px;
-    width: fit-content
+  color: #3bbab3;
+  border-width: 3px;
+  border-color: #3bbab3;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.4rem;
+  border-radius: 6px;
+  width: fit-content;
 }
 
 .form-button:hover {
-    color: #db92c9;
-    border-color: #db92c9;
-    background-color: white;
-
+  color: #db92c9;
+  border-color: #db92c9;
+  background-color: white;
 }
 
-/* ------------------TERAPIAS------------------ */
 .terapias {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .wrapper-terapias {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 2rem;
-    padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
 }
 
 .modal-title {
-    font-family: "Nunito", sans-serif;
-    font-weight: bold;
-    color: #3bbab3;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  color: #3bbab3;
 }
 
 h2 {
-    font-family: "Nunito", sans-serif;
-    font-size: 2rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 2rem;
 }
 
 .terapias-img {
-    width: 65vw;
-    padding-bottom: 1rem;
-
+  width: 65vw;
+  padding-bottom: 1rem;
 }
 
 .terapias-txt-corto {
-    font-size: 1.2rem;
-    text-align: center;
-    font-style: italic;
-    margin: 0rem 1rem 0rem 1rem;
-    padding-bottom: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  font-style: italic;
+  margin: 0rem 1rem 0rem 1rem;
+  padding-bottom: 1rem;
 }
 
 .terapias-txt-largo {
-    text-align: justify;
+  text-align: justify;
 }
 
 .btn-outline {
-    color: #3bbab3;
-    border-width: 3px;
-    border-color: #3bbab3;
-    font-size: 1rem;
-    font-weight: bold;
+  color: #3bbab3;
+  border-width: 3px;
+  border-color: #3bbab3;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .btn-outline:hover {
-    color: #db92c9;
-    border-color: #db92c9;
+  color: #db92c9;
+  border-color: #db92c9;
 }
+
 .modal-title {
-    background-color: white;
-}
-
-/* PIE DE PAGINA */
-footer {
-    font-family: "gobold";
-    font-size: 1rem;
-    text-align: center;
-    background-color: #7bc6e6;
-    position: sticky;
-    bottom: 0;
-    padding-top: 0.3rem;
-}
-
-footer .bi {
-    fill: #ad6d9d;
-    padding-bottom: 0.3rem;
+  background-color: white;
 }
 
 /* -------------------------------------TABLET------------------------------------- */
-@media only screen and (min-width:768px) {
-    .nav-bootstrap {
-        display: none;
-    }
-
-    .enlaces-txt {
-        grid-column: span 2;
-        display: block;
-        padding-right: 0.5rem;
-        color: #2b847f;
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
-
-    header {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2);
-        align-items: center;
-    }
-
-    .navbar-flex {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        grid-column: span 2;
-    }
-
-    .logo {
-        width: 100px;
-    }
-
-    .enlaces {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    ul li a {
-        list-style-type: none;
-        font-family: "gobold";
-        font-size: 1.2rem;
-        font-style: normal;
-        text-decoration: none;
-        color: #3bbab3;
-        margin: 1rem 1rem 1rem 1rem;
-    }
-
-    ul li a:hover {
-        color: #db92c9;
-    }
-
-    .mapa {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: stretch;
-        margin: 0rem 1rem 1rem 1rem;
-    }
-
-    .mapa h2 {
-        margin-left: 1rem;
-        align-self: start;
-    }
-
-    .formulario-de-contacto,
-    h2 {
-        margin-left: 1rem;
-        text-align: start;
-    }
-
-    select {
-        margin-bottom: 1rem;
-    }
-
-    .formulario {
-        text-align: start;
-    }
-
-    .form-input {
-        width: 50vw;
-        margin-bottom: 1rem;
-    }
-
-    .motivo-de-consulta-textarea {
-        width: 77vw;
-    }
-
-    .button-tablet {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    .terapias {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2);
-        align-items: center;
-        padding-bottom: 2.5rem;
-        padding-top: 1rem;
-
-    }
-
-    .terapias-reverse {
-        direction: rtl;
-    }
-
-    .terapias-txt-corto {
-        width: 35vw;
-    }
-
-
-    .terapias-img {
-
-        width: 35vw;
-        margin-left: 5rem;
-        margin-right: 5rem;
-    }
-
+@media only screen and (min-width: 768px) {
+  .mapa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    margin: 0rem 1rem 1rem 1rem;
+  }
+  .mapa h2 {
+    margin-left: 1rem;
+    align-self: start;
+  }
+  .formulario-de-contacto,
+  h2 {
+    margin-left: 1rem;
+    text-align: start;
+  }
+  select {
+    margin-bottom: 1rem;
+  }
+  .formulario {
+    text-align: start;
+  }
+  .form-input {
+    width: 50vw;
+    margin-bottom: 1rem;
+  }
+  .motivo-de-consulta-textarea {
+    width: 77vw;
+  }
+  .button-tablet {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .terapias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2);
+    align-items: center;
+    padding-bottom: 2.5rem;
+    padding-top: 1rem;
+  }
+  .terapias-reverse {
+    direction: rtl;
+  }
+  .terapias-txt-corto {
+    width: 35vw;
+  }
+  .terapias-img {
+    width: 35vw;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
 }
-
 /* -----------------------------------------DESKTOP----------------------------------------- */
-@media only screen and (min-width:1200px) {
-    .enlaces-txt {
-        font-size: 1rem;
-    }
-
-    .navbar-flex {
-        flex-direction: row;
-    }
-
-    header ul {
-        margin-top: 1rem;
-        width: 80vw;
-    }
-
-    .motivo-de-consulta {
-        display: flex;
-
-    }
-
-    .motivo-de-consulta-textarea {
-        width: 50vw;
-    }
-
-
-    .terapias-grilla {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2);
-
-    }
-
-    .terapias {
-        display: flex;
-        padding-bottom: 1rem;
-        padding-top: 1rem;
-
-    }
-
-
-
-    .terapias-txt-corto {
-        width: 35vw;
-        text-align: center;
-    }
-
-    .terapias-img {
-
-        width: 25vw;
-        margin-left: 5rem;
-        margin-right: 5rem;
-    }
+@media only screen and (min-width: 1200px) {
+  .motivo-de-consulta {
+    display: flex;
+  }
+  .motivo-de-consulta-textarea {
+    width: 50vw;
+  }
+  .terapias-grilla {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2);
+  }
+  .terapias {
+    display: flex;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  .terapias-txt-corto {
+    width: 35vw;
+    text-align: center;
+  }
+  .terapias-img {
+    width: 25vw;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
 }
+
+/*# sourceMappingURL=style.css.map */

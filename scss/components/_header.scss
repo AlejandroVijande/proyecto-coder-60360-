@@ -1,0 +1,126 @@
+// TABLET
+@mixin mq-tablet {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+// DESKTOP
+@mixin mq-desktop {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+header {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background-color: white;
+
+    @include mq-tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2);
+        align-items: center;
+    }
+
+    // ENLACES DE CONTACTO
+    .enlaces-de-contacto {
+        grid-column: span 2;
+        display: flex;
+        justify-content: end;
+        background-color: $rosa;
+        align-items: center;
+        padding: 0.2rem 0rem 0.2rem 0rem;
+
+        .bi {
+            fill: #2b847f;
+            margin: 0rem 0.3rem 0rem 0.8rem;
+        }
+
+        .enlaces-txt {
+            display: none;
+
+            @include mq-tablet {
+                grid-column: span 2;
+                display: block;
+                padding-right: 0.5rem;
+                color: #2b847f;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            @include mq-desktop {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .nav-bootstrap {
+        @include mq-tablet {
+            display: none;
+        }
+
+        .enlaces-nav {
+            list-style-type: none;
+            font-family: "gobold";
+            font-size: 1rem;
+            font-style: normal;
+            text-decoration: none;
+            color: $verde;
+        }
+    }
+
+    // NAVBAR
+    .logo {
+        @include mq-tablet {
+            width: 100px;
+        }
+    }
+
+    .navbar-flex {
+        display: none;
+
+        @include mq-tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            grid-column: span 2;
+        }
+        @include mq-desktop {
+            flex-direction: row;
+        }
+
+        .enlaces {
+            @include mq-tablet {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    ul {
+        @include mq-desktop{
+            margin-top: 1rem;
+            width: 80vw;
+        }
+        li {
+            a {
+                @include mq-tablet {
+                    list-style-type: none;
+                    font-family: "gobold";
+                    font-size: 1.2rem;
+                    font-style: normal;
+                    text-decoration: none;
+                    color: $verde;
+                    margin: 1rem 1rem 1rem 1rem;
+                }
+            }
+            a :hover {
+                color: $rosa;            
+            }
+        }
+    }
+}
