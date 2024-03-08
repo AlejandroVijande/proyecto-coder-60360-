@@ -126,7 +126,7 @@ header .navbar-flex {
     margin: 1rem 1rem 1rem 1rem;
   }
 }
-header ul li a :hover {
+header ul li a:hover {
   color: #db92c9;
 }
 
