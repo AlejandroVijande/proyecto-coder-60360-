@@ -1,0 +1,41 @@
+// TABLET
+@mixin mq-tablet {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+// DESKTOP
+@mixin mq-desktop {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+
+// MOBILE FIRST
+.nuestro-trabajo {
+    text-align: center;
+    padding: 1rem 3rem 0rem 3rem;
+
+    @include mq-tablet {
+        padding: 1rem 5rem 0rem 5rem;
+        text-align: justify;
+
+    }
+
+
+}
+
+.piedra-libre {
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+main {
+    @include mq-desktop {
+
+        padding: 1rem 4rem 0rem 4rem;
+    }
+}

@@ -1,15 +1,41 @@
+// TABLET
+@mixin mq-tablet {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+// DESKTOP
+@mixin mq-desktop {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+
 // MOBILE FIRST
+
 section h1 {
     font-family: "Nunito", sans-serif;
     font-style: italic;
     font-size: 1.5rem;
-    background-color: #db92c9;
+    background-color: $rosa;
     text-align: center;
+    padding: 0.2rem 0rem 0.2rem 0rem;
 }
 
 .carousel,
 .slide {
     padding: 0.5rem;
+
+    @include mq-tablet {
+        padding: 0rem 10rem 0rem 10rem;
+
+    }
+
+    @include mq-desktop {
+        padding: 0rem 18rem 0rem 18rem;
+    }
 }
 
 h2 {
@@ -24,49 +50,125 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include mq-tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        margin: 0rem 1rem 1rem 1rem;
+
+        h2 {
+            margin-left: 1rem;
+            align-self: start;
+        }
+    }
+
 }
 
-textarea,
-select,
-label {
-    width: 200px;
-    padding: 0;
-    margin: 4px;
-    box-sizing: border-box;
+.formulario-de-contacto {
+    @include mq-desktop {
+        margin-left: 15rem;
+    }
+
+    h2 {
+        @include mq-tablet {
+            margin-left: 1rem;
+            text-align: start;
+        }
+
+        @include mq-desktop {
+            margin-left: 0rem;
+        }
+
+    }
+
+    textarea,
+    select,
+    label {
+        width: 200px;
+        padding: 0;
+        margin: 4px;
+        box-sizing: border-box;
+    }
+
+    select {
+        margin-bottom: 1rem;
+    }
+
+    .formulario {
+        font-family: "Nunito", sans-serif;
+        font-style: normal;
+        font-size: 1rem;
+        text-align: center;
+        text-decoration: none;
+        margin-bottom: 1rem;
+
+        @include mq-tablet {
+            text-align: start;
+        }
+    }
+
+    @include mq-desktop {
+        .motivo-de-consulta {
+            display: flex;
+        }
+    }
+
+    .motivo-de-consulta-textarea {
+        @include mq-tablet {
+            width: 40vw;
+        }
+
+        @include mq-desktop {
+            width: 50vw;
+        }
+
+    }
+
+    .form-input {
+        width: 70vw;
+        margin-bottom: 1rem;
+
+        @include mq-tablet {
+            width: 40vw;
+            margin-bottom: 1rem;
+        }
+    }
+
 }
 
-select {
-    margin-bottom: 1rem;
-}
+.button-tablet {
+    @include mq-tablet {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
 
-.formulario {
-    font-family: "Nunito", sans-serif;
-    font-style: normal;
-    font-size: 1rem;
-    text-align: center;
-    text-decoration: none;
-    margin-bottom: 1rem;
-}
+    .form-button {
+        color: $verde;
+        border-width: 3px;
+        border-color: $verde;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 0.4rem;
+        border-radius: 6px;
+        width: fit-content;
+    }
 
-.form-input {
-    width: 70vw;
-    margin-bottom: 1rem;
-}
+    @include mq-desktop {
+        display: flex;
+        justify-content: start;
+        padding-left: 13rem
+    }
 
-.form-button {
-    color: #3bbab3;
-    border-width: 3px;
-    border-color: #3bbab3;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 0.4rem;
-    border-radius: 6px;
-    width: fit-content
-}
+    .form-button:hover {
+        color: $rosa;
+        border-color: $rosa;
+        background-color: white;
+        transform: scale(1.1, 1.1);
+        box-shadow: 5px 5px 5px $rosa;
 
-.form-button:hover {
-    color: #db92c9;
-    border-color: #db92c9;
-    background-color: white;
 
+    }
 }

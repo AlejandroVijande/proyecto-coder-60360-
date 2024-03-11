@@ -23,6 +23,14 @@ img {
   font-family: "gobold";
   src: url(./font/Gobold\ Regular.ttf);
 }
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
 header {
   position: sticky;
   z-index: 1;
@@ -48,6 +56,7 @@ header .enlaces-de-contacto {
 header .enlaces-de-contacto .bi {
   fill: #2b847f;
   margin: 0rem 0.3rem 0rem 0.8rem;
+  filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.301));
 }
 header .enlaces-de-contacto .enlaces-txt {
   display: none;
@@ -60,6 +69,7 @@ header .enlaces-de-contacto .enlaces-txt {
     color: #2b847f;
     font-size: 1.2rem;
     font-weight: bold;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.301);
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -128,6 +138,7 @@ header .navbar-flex {
 }
 header ul li a:hover {
   color: #db92c9;
+  text-shadow: 1px 1px 5px #7bc6e6;
 }
 
 footer {
@@ -151,11 +162,24 @@ section h1 {
   font-size: 1.5rem;
   background-color: #db92c9;
   text-align: center;
+  padding: 0.2rem 0rem 0.2rem 0rem;
 }
 
 .carousel,
 .slide {
   padding: 0.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .carousel,
+  .slide {
+    padding: 0rem 10rem 0rem 10rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .carousel,
+  .slide {
+    padding: 0rem 18rem 0rem 18rem;
+  }
 }
 
 h2 {
@@ -171,111 +195,6 @@ h2 {
   justify-content: center;
   align-items: center;
 }
-
-textarea,
-select,
-label {
-  width: 200px;
-  padding: 0;
-  margin: 4px;
-  box-sizing: border-box;
-}
-
-select {
-  margin-bottom: 1rem;
-}
-
-.formulario {
-  font-family: "Nunito", sans-serif;
-  font-style: normal;
-  font-size: 1rem;
-  text-align: center;
-  text-decoration: none;
-  margin-bottom: 1rem;
-}
-
-.form-input {
-  width: 70vw;
-  margin-bottom: 1rem;
-}
-
-.form-button {
-  color: #3bbab3;
-  border-width: 3px;
-  border-color: #3bbab3;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 0.4rem;
-  border-radius: 6px;
-  width: fit-content;
-}
-
-.form-button:hover {
-  color: #db92c9;
-  border-color: #db92c9;
-  background-color: white;
-}
-
-.terapias {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.wrapper-terapias {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 2rem;
-  padding-top: 1rem;
-}
-
-.modal-title {
-  font-family: "Nunito", sans-serif;
-  font-weight: bold;
-  color: #3bbab3;
-}
-
-h2 {
-  font-family: "Nunito", sans-serif;
-  font-size: 2rem;
-}
-
-.terapias-img {
-  width: 65vw;
-  padding-bottom: 1rem;
-}
-
-.terapias-txt-corto {
-  font-size: 1.2rem;
-  text-align: center;
-  font-style: italic;
-  margin: 0rem 1rem 0rem 1rem;
-  padding-bottom: 1rem;
-}
-
-.terapias-txt-largo {
-  text-align: justify;
-}
-
-.btn-outline {
-  color: #3bbab3;
-  border-width: 3px;
-  border-color: #3bbab3;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.btn-outline:hover {
-  color: #db92c9;
-  border-color: #db92c9;
-}
-
-.modal-title {
-  background-color: white;
-}
-
-/* -------------------------------------TABLET------------------------------------- */
 @media only screen and (min-width: 768px) {
   .mapa {
     display: flex;
@@ -288,30 +207,237 @@ h2 {
     margin-left: 1rem;
     align-self: start;
   }
-  .formulario-de-contacto,
-  h2 {
+}
+
+@media only screen and (min-width: 1200px) {
+  .formulario-de-contacto {
+    margin-left: 15rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .formulario-de-contacto h2 {
     margin-left: 1rem;
     text-align: start;
   }
-  select {
-    margin-bottom: 1rem;
+}
+@media only screen and (min-width: 1200px) {
+  .formulario-de-contacto h2 {
+    margin-left: 0rem;
   }
-  .formulario {
+}
+.formulario-de-contacto textarea,
+.formulario-de-contacto select,
+.formulario-de-contacto label {
+  width: 200px;
+  padding: 0;
+  margin: 4px;
+  box-sizing: border-box;
+}
+.formulario-de-contacto select {
+  margin-bottom: 1rem;
+}
+.formulario-de-contacto .formulario {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .formulario-de-contacto .formulario {
     text-align: start;
   }
-  .form-input {
+}
+@media only screen and (min-width: 1200px) {
+  .formulario-de-contacto .motivo-de-consulta {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .formulario-de-contacto .motivo-de-consulta-textarea {
+    width: 40vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .formulario-de-contacto .motivo-de-consulta-textarea {
     width: 50vw;
+  }
+}
+.formulario-de-contacto .form-input {
+  width: 70vw;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .formulario-de-contacto .form-input {
+    width: 40vw;
     margin-bottom: 1rem;
   }
-  .motivo-de-consulta-textarea {
-    width: 77vw;
-  }
+}
+
+@media only screen and (min-width: 768px) {
   .button-tablet {
     display: flex;
     justify-content: center;
     gap: 1rem;
   }
-  .terapias {
+}
+.button-tablet .form-button {
+  color: #3bbab3;
+  border-width: 3px;
+  border-color: #3bbab3;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.4rem;
+  border-radius: 6px;
+  width: fit-content;
+}
+@media only screen and (min-width: 1200px) {
+  .button-tablet {
+    display: flex;
+    justify-content: start;
+    padding-left: 13rem;
+  }
+}
+.button-tablet .form-button:hover {
+  color: #db92c9;
+  border-color: #db92c9;
+  background-color: white;
+  transform: scale(1.1, 1.1);
+  box-shadow: 5px 5px 5px #db92c9;
+}
+
+.enlaces-de-interes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: black;
+}
+.enlaces-de-interes img {
+  width: 100px;
+}
+.enlaces-de-interes img:hover {
+  transform: scale(1.2, 1.2);
+}
+@media only screen and (min-width: 768px) {
+  .enlaces-de-interes {
+    display: grid;
+    grid-template-areas: "img h3" "img p" "img button";
+    padding: 0rem 2rem 1rem 2rem;
+    gap: 1rem;
+  }
+  .enlaces-de-interes p {
+    text-align: justify;
+  }
+  .enlaces-de-interes h3 {
+    text-align: left;
+  }
+  .enlaces-de-interes img {
+    width: 150px;
+    align-self: center;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .enlaces-de-interes {
+    justify-content: start;
+  }
+}
+
+.profesionales-grilla {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .profesionales-grilla .profesionales, .profesionales-grilla .profesionales-reverse {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2);
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 6rem 1.5rem 6rem;
+  }
+  .profesionales-grilla .profesionales h4, .profesionales-grilla .profesionales-reverse h4 {
+    width: 300px;
+    text-align: left;
+  }
+  .profesionales-grilla .profesionales-reverse {
+    direction: rtl;
+  }
+  .profesionales-grilla .profesionales-reverse h4 {
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .profesionales-grilla .profesionales-desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2);
+    justify-content: start;
+    align-items: center;
+    padding: 1.5rem 19rem 1.5rem 9rem;
+    direction: ltr;
+  }
+  .profesionales-grilla .profesionales-desktop h4 {
+    width: 500px;
+    text-align: left;
+  }
+}
+.profesionales-grilla h4 {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 300px;
+}
+.profesionales-grilla .profesional-img {
+  width: 150px;
+}
+
+.nuestro-trabajo {
+  text-align: center;
+  padding: 1rem 3rem 0rem 3rem;
+}
+@media only screen and (min-width: 768px) {
+  .nuestro-trabajo {
+    padding: 1rem 5rem 0rem 5rem;
+    text-align: justify;
+  }
+}
+
+.piedra-libre {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  main {
+    padding: 1rem 4rem 0rem 4rem;
+  }
+}
+
+main h2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 2rem;
+}
+@media only screen and (min-width: 1200px) {
+  main .terapias-grilla {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2);
+  }
+}
+main .terapias-grilla .terapias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  main .terapias-grilla .terapias {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2);
@@ -319,44 +445,85 @@ h2 {
     padding-bottom: 2.5rem;
     padding-top: 1rem;
   }
-  .terapias-reverse {
-    direction: rtl;
+}
+@media only screen and (min-width: 1200px) {
+  main .terapias-grilla .terapias {
+    display: flex;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
   }
-  .terapias-txt-corto {
-    width: 35vw;
-  }
-  .terapias-img {
+}
+main .terapias-grilla .terapias .terapias-img {
+  width: 65vw;
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  main .terapias-grilla .terapias .terapias-img {
     width: 35vw;
     margin-left: 5rem;
     margin-right: 5rem;
   }
 }
-/* -----------------------------------------DESKTOP----------------------------------------- */
 @media only screen and (min-width: 1200px) {
-  .motivo-de-consulta {
-    display: flex;
-  }
-  .motivo-de-consulta-textarea {
-    width: 50vw;
-  }
-  .terapias-grilla {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2);
-  }
-  .terapias {
-    display: flex;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-  }
-  .terapias-txt-corto {
-    width: 35vw;
-    text-align: center;
-  }
-  .terapias-img {
+  main .terapias-grilla .terapias .terapias-img {
     width: 25vw;
     margin-left: 5rem;
     margin-right: 5rem;
+  }
+}
+main .terapias-grilla .terapias .wrapper-terapias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+main .terapias-grilla .terapias .wrapper-terapias .terapias-txt-corto {
+  font-size: 1.2rem;
+  text-align: center;
+  font-style: italic;
+  margin: 0rem 1rem 0rem 1rem;
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  main .terapias-grilla .terapias .wrapper-terapias .terapias-txt-corto {
+    width: 35vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main .terapias-grilla .terapias .wrapper-terapias .terapias-txt-corto {
+    width: 35vw;
+    text-align: center;
+  }
+}
+main .terapias-grilla .terapias .wrapper-terapias .modal-title {
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  color: #3bbab3;
+  background-color: white;
+}
+main .terapias-grilla .terapias .wrapper-terapias .terapias-txt-largo {
+  text-align: justify;
+}
+main .terapias-grilla .terapias .wrapper-terapias .btn-outline {
+  color: #3bbab3;
+  border-width: 3px;
+  border-color: #3bbab3;
+  font-size: 1rem;
+  font-weight: bold;
+}
+main .terapias-grilla .terapias .wrapper-terapias .btn-outline:hover {
+  color: #db92c9;
+  border-color: #db92c9;
+  transform: scale(1.1, 1.1);
+  box-shadow: 5px 5px 5px #db92c9;
+}
+@media only screen and (min-width: 768px) {
+  main .terapias-grilla .terapias-reverse {
+    direction: rtl;
+  }
+  main .terapias-grilla .modal-content {
+    direction: ltr;
   }
 }
 

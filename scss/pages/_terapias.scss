@@ -1,59 +1,131 @@
+// TABLET
+@mixin mq-tablet {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+// DESKTOP
+@mixin mq-desktop {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
 // MOBILE FIRST
-.terapias {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+main {
+    h2 {
+        font-family: "Nunito", sans-serif;
+        font-size: 2rem;
+    }
 
-.wrapper-terapias {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 2rem;
-    padding-top: 1rem;
-}
+    .terapias-grilla {
+        @include mq-desktop {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2);
+        }
 
-.modal-title {
-    font-family: "Nunito", sans-serif;
-    font-weight: bold;
-    color: #3bbab3;
-}
+        .terapias {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-h2 {
-    font-family: "Nunito", sans-serif;
-    font-size: 2rem;
-}
+            @include mq-tablet {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2);
+                align-items: center;
+                padding-bottom: 2.5rem;
+                padding-top: 1rem;
+            }
 
-.terapias-img {
-    width: 65vw;
-    padding-bottom: 1rem;
+            @include mq-desktop {
+                display: flex;
+                padding-bottom: 1rem;
+                padding-top: 1rem;
+            }
 
-}
+            .terapias-img {
+                width: 65vw;
+                padding-bottom: 1rem;
 
-.terapias-txt-corto {
-    font-size: 1.2rem;
-    text-align: center;
-    font-style: italic;
-    margin: 0rem 1rem 0rem 1rem;
-    padding-bottom: 1rem;
-}
+                @include mq-tablet {
+                    width: 35vw;
+                    margin-left: 5rem;
+                    margin-right: 5rem;
+                }
 
-.terapias-txt-largo {
-    text-align: justify;
-}
+                @include mq-desktop {
+                    width: 25vw;
+                    margin-left: 5rem;
+                    margin-right: 5rem;
+                }
+            }
 
-.btn-outline {
-    color: #3bbab3;
-    border-width: 3px;
-    border-color: #3bbab3;
-    font-size: 1rem;
-    font-weight: bold;
-}
+            .wrapper-terapias {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 2rem;
+                padding-top: 1rem;
 
-.btn-outline:hover {
-    color: #db92c9;
-    border-color: #db92c9;
-}
-.modal-title {
-    background-color: white;
+                .terapias-txt-corto {
+                    font-size: 1.2rem;
+                    text-align: center;
+                    font-style: italic;
+                    margin: 0rem 1rem 0rem 1rem;
+                    padding-bottom: 1rem;
+
+                    @include mq-tablet {
+                        width: 35vw;
+                    }
+
+                    @include mq-desktop {
+                        width: 35vw;
+                        text-align: center;
+                    }
+                }
+
+                .modal-title {
+                    font-family: "Nunito", sans-serif;
+                    font-weight: bold;
+                    color: #3bbab3;
+                    background-color: white;
+                }
+
+                .terapias-txt-largo {
+                    text-align: justify;
+                }
+
+                .btn-outline {
+                    color: $verde;
+                    border-width: 3px;
+                    border-color: $verde;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+
+                .btn-outline:hover {
+                    color: $rosa;
+                    border-color: $rosa;
+                    transform: scale(1.1, 1.1);
+                    box-shadow: 5px 5px 5px $rosa;
+                }
+            }
+
+        }
+
+        @include mq-tablet {
+            .terapias-reverse {
+                direction: rtl;
+            }
+
+            .modal-content {
+                direction: ltr;
+            }
+
+        }
+
+    }
 }

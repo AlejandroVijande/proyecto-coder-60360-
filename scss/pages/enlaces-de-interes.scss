@@ -1,0 +1,59 @@
+// TABLET
+@mixin mq-tablet {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+// DESKTOP
+@mixin mq-desktop {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+// MOBILE FIRST
+
+.enlaces-de-interes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: black;
+
+    img {
+        width: 100px;
+
+        &:hover {
+            transform: scale(1.2, 1.2)
+        }
+    }
+
+
+    @include mq-tablet {
+        display: grid;
+        grid-template-areas: 'img h3' 'img p' 'img button';
+        padding: 0rem 2rem 1rem 2rem;
+        gap: 1rem;
+
+        p {
+            text-align: justify;
+        }
+
+        h3 {
+            text-align: left;
+        }
+
+        img {
+            width: 150px;
+            align-self: center;
+
+        }
+    }
+
+    @include mq-desktop {
+        justify-content: start;
+    }
+
+}

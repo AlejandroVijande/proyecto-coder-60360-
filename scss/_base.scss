@@ -1,8 +1,8 @@
 // aca van declaraciones que se mantienen a lo largo de todo el proyecto. 
 // Ejemplo: tamaños de titulos, tipografias, reseteos,
-$verde:#3bbab3;
+$verde: #3bbab3;
 $celeste: #7bc6e6;
-$rosa:#db92c9;
+$rosa: #db92c9;
 
 // RESET 
 * {
@@ -31,8 +31,10 @@ img {
     src: url(./font/Gobold\ Regular.ttf);
 }
 
-@mixin flex-box ($justify:center, $align:center){
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
 }
