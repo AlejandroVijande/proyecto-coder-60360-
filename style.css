@@ -315,6 +315,7 @@ h2 {
   flex-direction: column;
   text-align: center;
   color: black;
+  padding: 1rem;
 }
 .enlaces-de-interes img {
   width: 100px;
