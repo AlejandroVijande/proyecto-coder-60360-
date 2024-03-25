@@ -1,17 +1,3 @@
-// TABLET
-@mixin mq-tablet {
-    @media only screen and (min-width: 768px) {
-        @content;
-    }
-}
-
-// DESKTOP
-@mixin mq-desktop {
-    @media only screen and (min-width: 1200px) {
-        @content;
-    }
-}
-
 // MOBILE FIRST
 .profesionales-grilla {
     display: flex;

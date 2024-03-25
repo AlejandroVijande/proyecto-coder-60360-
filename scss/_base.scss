@@ -1,5 +1,17 @@
-// aca van declaraciones que se mantienen a lo largo de todo el proyecto. 
-// Ejemplo: tamaños de titulos, tipografias, reseteos,
+// TABLET
+@mixin mq-tablet {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+// DESKTOP
+@mixin mq-desktop {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
 $verde: #3bbab3;
 $celeste: #7bc6e6;
 $rosa: #db92c9;
@@ -37,4 +49,11 @@ h2 {
 
 h3 {
     font-size: 1.5rem;
+}
+
+main {
+    @include mq-desktop {
+
+        padding: 1rem 4rem 0rem 4rem;
+    }
 }

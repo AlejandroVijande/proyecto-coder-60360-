@@ -31,6 +31,12 @@ h3 {
   font-size: 1.5rem;
 }
 
+@media only screen and (min-width: 1200px) {
+  main {
+    padding: 1rem 4rem 0rem 4rem;
+  }
+}
+
 header {
   position: sticky;
   z-index: 1;
@@ -416,12 +422,6 @@ h2 {
 .piedra-libre {
   text-align: center;
   font-size: 1.5rem;
-}
-
-@media only screen and (min-width: 1200px) {
-  main {
-    padding: 1rem 4rem 0rem 4rem;
-  }
 }
 
 main h2 {
